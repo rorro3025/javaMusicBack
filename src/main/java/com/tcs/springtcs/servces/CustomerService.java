@@ -34,5 +34,13 @@ public class CustomerService {
             System.out.println("Error " + e.getMessage());
         }
     }
+
+    public void deleteCustomer(long id){
+        try{
+            customerRepository.deleteById(id);
+        }catch (Exception e){
+            System.out.print(e.getMessage());
+        }
+    }
 }
 
